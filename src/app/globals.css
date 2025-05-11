@@ -9,116 +9,396 @@
     --line-height-body: 1.625;
     --tracking-heading-tight: -0.01em;
 
-    /* Everyman Brand Colors in HSL */
-    --background: 220 20% 98%;
-    --foreground: 220 15% 20%;
+    /* Professional & Modern Color Scheme */
+    --background: 220 16% 97%; /* Off-white (#F8FAFC) */
+    --foreground: 220 16% 10%; /* Almost Black (#0F172A) */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 20%;
+    --card-foreground: 220 16% 10%; /* Almost Black */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 20%;
+    --popover-foreground: 220 16% 10%; /* Almost Black */
 
-    --primary: 210 60% 60%; /* Soft blue */
-    --primary-foreground: 0 0% 100%;
+    --primary: 220 28% 23%; /* Dark Navy (#1E293B) */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 140 40% 70%; /* Gentle green */
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 220 28% 23%; /* Dark Navy */
+    --secondary-foreground: 0 0% 100%; /* White */
 
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 220 16% 90%; /* Light Gray */
+    --muted-foreground: 220 16% 40%; /* Medium Gray */
 
-    --accent: 40 30% 90%; /* Warm neutral */
-    --accent-foreground: 0 0% 20%;
+    --accent: 220 90% 60%; /* Bright Blue (#3B82F6) */
+    --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 70% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 60%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 220 20% 85%;
-    --input: 220 20% 85%;
-    --ring: 210 60% 60%;
+    --border: 220 16% 80%; /* Light Gray Border */
+    --input: 220 16% 80%; /* Light Gray Input */
+    --ring: 220 90% 60%; /* Bright Blue Ring */
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 220 15% 15%;
-    --foreground: 0 0% 100%;
-    --card: 220 15% 18%;
-    --card-foreground: 0 0% 100%;
-    --popover: 220 15% 18%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 210 60% 60%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 140 40% 50%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 220 15% 20%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 40 30% 30%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 40%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 220 15% 30%;
-    --input: 220 15% 30%;
-    --ring: 210 60% 60%;
+    --background: 220 28% 23%; /* Dark Navy (#1E293B) */
+    --foreground: 220 16% 97%; /* Off-white (#F8FAFC) */
+    --card: 220 28% 23%; /* Dark Navy */
+    --card-foreground: 220 16% 97%; /* Off-white */
+    --popover: 220 28% 23%; /* Dark Navy */
+    --popover-foreground: 220 16% 97%; /* Off-white */
+    --primary: 220 90% 60%; /* Bright Blue (#3B82F6) */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 220 16% 97%; /* Off-white */
+    --secondary-foreground: 220 28% 23%; /* Dark Navy */
+    --muted: 220 16% 20%; /* Dark Gray */
+    --muted-foreground: 220 16% 60%; /* Medium Gray */
+    --accent: 220 90% 60%; /* Bright Blue (#3B82F6) */
+    --accent-foreground: 0 0% 100%; /* White */
+    --destructive: 0 70% 40%; /* Dark Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 220 16% 30%; /* Dark Gray Border */
+    --input: 220 16% 30%; /* Dark Gray Input */
+    --ring: 220 90% 60%; /* Bright Blue Ring */
+  }
+
+  html, body {
+    height: 100%; /* Ensure the body spans the full viewport height */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   * {
-    @apply border-border;
+    border-color: var(--border);
   }
 
   body {
-    @apply font-sans bg-background text-foreground text-base leading-relaxed;
+    font-family: var(--font-sans);
+    color: hsl(var(--foreground));
+    font-size: 1rem;
+    line-height: 1.625;
+    background-color: hsl(var(--background)); 
   }
 
-  /* Everyman Typography Base Styles */
+  /* Typography Base Styles */ 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-semibold tracking-tight capitalize;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: var(--tracking-heading-tight);
+    text-transform: capitalize;
   }
 
-  h1 { @apply text-4xl md:text-5xl lg:text-6xl mb-4; }
-  h2 { @apply text-3xl md:text-4xl lg:text-5xl mb-3; }
-  h3 { @apply text-2xl md:text-3xl mb-2; }
-  h4 { @apply text-xl md:text-2xl mb-2; }
+  h1 { 
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    text-shadow: 0 2px 10px rgba(161, 114, 248, 0.3);
+  }
+  
+  h2 { 
+    font-size: 1.875rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  h3 { 
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h4 { 
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
 
   p {
-    @apply text-base leading-relaxed mb-4;
+    font-size: 1rem;
+    line-height: 1.625;
+    margin-bottom: 1rem;
   }
 
   .supporting-text {
-    @apply text-sm text-muted-foreground;
+    font-size: 0.875rem;
+    color: hsl(var(--muted-foreground));
+  }
+  
+  /* Responsive typography */
+  @media (min-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.25rem; }
+    h3 { font-size: 1.875rem; }
+    h4 { font-size: 1.5rem; }
+  }
+  
+  @media (min-width: 1024px) {
+    h1 { font-size: 3.75rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 1.875rem; }
+    h4 { font-size: 1.5rem; }
+  }
+
+  /* Add this to ensure consistent heading styling across all pages */
+  h1, .typing-animation, .typing-animation-complete {
+    line-height: 1.3;
+    padding-bottom: 10px;
+    overflow: visible;
   }
 }
 
 @layer components {
   .card {
-    @apply rounded-xl shadow-md bg-card text-card-foreground p-6 mb-6;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .button {
-    @apply rounded-lg shadow-sm font-medium px-5 py-2 transition-colors;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    padding: 1.25rem 0.5rem;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
   }
 }
 
 @layer utilities {
   /* Brand Gradient Utilities */
   .bg-gradient-brand {
-    @apply bg-gradient-to-r from-primary-400 to-accent-200;
+    background-image: linear-gradient(to right, var(--primary-400), var(--accent-200));
   }
   
   .text-gradient-brand {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-200;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--primary-400), var(--accent-200));
   }
 
   .bg-gradient-innovation {
-    @apply bg-gradient-to-r from-secondary-400 to-accent-100;
+    background-image: linear-gradient(to right, var(--secondary-400), var(--accent-100));
   }
 
   /* High-contrast text utilities for accessibility */
   .text-high-contrast {
-    @apply text-neutral-900 dark:text-neutral-50;
+    color: #171717;
+  }
+  
+  .dark .text-high-contrast {
+    color: #fafafa;
   }
 
   .text-medium-contrast {
-    @apply text-neutral-700 dark:text-neutral-300;
+    color: #404040;
+  }
+  
+  .dark .text-medium-contrast {
+    color: #d4d4d4;
   }
 }
+  
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-reverse-slow {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 16s linear infinite;
+  }
+
+  .animate-spin-reverse-slow {
+    animation: spin-reverse-slow 20s linear infinite;
+  }
+
+  /* Marquee Styles */
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #ffffff; /* Optional: background color */
+    padding: 10px 0; /* Optional: padding */
+  }
+
+  .marquee {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding: 0 0.5rem; /* Space between items */
+    font-size: 1.25rem; /* Adjust font size */
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Typing Animation */
+  .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing-reverse 3s steps(30, end), blink 0.5s step-end ;
+    line-height: 1.5;
+    text-align: center;
+    display: inline-block;
+    width: 0;
+    animation-fill-mode: forwards;
+    border-right: 3px solid #a172f8;
+    margin: 0 auto; /* Center the element */
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* Blink animation for cursor */
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #a172f8; }
+  }
+  
+
+ /* Reverse Typing Animation */
+  .typing-animation-reverse {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing-reverse 1.5s steps(30, end), blink 0.5s step-end ;
+    line-height: 1.5;
+    text-align: right;
+    display: inline-block;
+    width: 0;
+    animation-fill-mode: forwards;
+    border-right: 3px solid #a172f8;
+    margin: 0 auto; /* Center the element */
+  }
+
+  @keyframes typing-reverse {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes coin-spin {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .animate-coin-spin {
+    animation: coin-spin 1s ease-in-out;
+  }
+
+  /* Wavy image effect */
+  @keyframes morphBorder {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+
+  .wavy-image {
+    animation: morphBorder 8s ease-in-out infinite;
+    border: 2px solid #a172f8;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  /* Animated wavy border */
+  .wavy-border {
+    animation: morphBorder 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(90deg, transparent, rgba(161, 114, 248, 0.4), transparent);
+    filter: blur(2px);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /* Make sure the spin animation and wavy animation work together */
+  .animate-coin-spin.wavy-image {
+    animation: morphBorder 8s ease-in-out infinite, spin 1s ease-in-out;
+  }
+
+  /* Wavy image content effect */
+  @keyframes morphContent {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+
+  .wavy-image-inner {
+    animation: morphContent 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+
+
+  /* Typing animation with cursor that disappears after completion */
+  .typing-animation-complete {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    border-right: 0; /* Remove cursor when complete */
+    animation-fill-mode: forwards;
+    margin: 0 auto; /* Center the element */
+    text-align: center;
+    width: auto !important; /* Ensure consistent width */
+  }
+
+  .typing-animation-reverse-complete {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    border-right: 0; /* Remove cursor when complete */
+    animation-fill-mode: forwards;
+    margin: 0 auto; /* Center the element */
+    text-align: center;
+    width: auto !important; /* Ensure consistent width */
+  }
+
+  /* Responsive media queries */
+  @media (max-width: 640px) {
+    .typing-animation, .typing-animation-reverse {
+      animation-duration: 2s;
+    }
+    
+    .animate-spin-slow {
+      animation-duration: 10s;
+    }
+  }

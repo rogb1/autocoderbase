@@ -18,12 +18,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Outlaw AI Consultancy",
-    template: "%s | Outlaw AI Consultancy",
+    default: "Roger Basantes",
+    template: "%s | Roger Basantes",
   },
-  description: "Challenging the AI status quo with radical honesty and evidence-based disruption",
-  authors: [{ name: "Outlaw AI Consultancy" }],
-  keywords: ["AI consultancy", "digital transformation", "disruptive innovation"],
+  description: "Website of Roger Basantes, a Web and Information Systems student at NJIT.",
+  authors: [{ name: "Roger Basantes" }],
+  keywords: ["Web Development", "Information Systems", "UX Design", "Frontend", "Backend"],
 };
 
 export const viewport: Viewport = {
@@ -33,6 +33,8 @@ export const viewport: Viewport = {
   ],
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({
@@ -42,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${ibmPlexMono.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${ibmPlexMono.variable} font-sans antialiased overflow-x-hidden`}>
         <MainNav />
         {children}
       </body>
