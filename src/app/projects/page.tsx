@@ -47,11 +47,11 @@ export default function Projects() {
               technologies={["JavaScript", "JSX", "React", "D3.js", "PapaParse"]}
             />
             <ProjectCard
-              title="RAG Demo with LangChain and OpenAI"
-              description="This project showcases a Retrieval-Augmented Generation (RAG) pipeline using LangChain and OpenAI's API to answer user queries based on a custom knowledge base. It involves loading documents, creating embeddings, and querying data with OpenAI's GPT model, demonstrating the integration of language models with external data for intelligent, context-aware responses."
-              link="https://rogb1.github.io/js-rag-demo/assignment1_llm_embeddings/"
+              title="Streaming Chat Application"
+              description="This project features a Streaming Chat application is a sophisticated chat interface that enhances user experience by displaying AI responses character-by-character in real time, rather than waiting for the complete response before displaying it."
+              link="https://js-rag-demo-31np.vercel.app/"
               image="/rag.png"
-              technologies={["LangChain", "OpenAI API", "JavaScript", "Node.js"]}
+              technologies={["OpenAI API","Langchain", "Express.js", "Node.js", "JavaScript"]}
             />
             <ProjectCard
               title="Sports Team Website"
